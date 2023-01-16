@@ -23,7 +23,7 @@ class home_job_seeker extends Controller
         $all_application=Job_Seeker_Job_Offer::all();
         $all_categories=Category::all();
         $all_locations=Location::all();
-        return view('job_seeker.home',compact('latest_job_offers','all_jobs','all_jobs_seeker','all_employers','all_application','all_categories','all_locations'));
+        return view('welcome',compact('latest_job_offers','all_jobs','all_jobs_seeker','all_employers','all_application','all_categories','all_locations'));
     }
 
 }
