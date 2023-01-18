@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('terme-et-conditions',function(){
     return view('termes_et_conditions');
 });
@@ -22,7 +22,7 @@ Route::get('politique-de-confidentalité',function(){
 });
 Auth::routes();
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
-Route::get('job_seeker/index','App\Http\Controllers\job_seeker\home_job_seeker@show_index')->name('show.index');
+Route::get('/','App\Http\Controllers\job_seeker\home_job_seeker@show_index')->name('show.index');
 
 Route::prefix('job_seeker')->group(function(){
         //
